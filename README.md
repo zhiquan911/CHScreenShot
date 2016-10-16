@@ -102,8 +102,26 @@ pod 'CHScreenShot'
 
 ```swift
 
+    /// 分享回调
+    var shareAction: ((CHShowScreenShotView) -> Void)!
+
     /// 样式2
     func shareStyle2() {
+
+        self.shareAction = {
+            (screenShotView) in
+            
+            //把image转为分享的图片样式
+            let newImage = screenShotView.screenshotImage.ch_addShareInfo(
+                appLogo: UIImage(named: "swift")!,
+                qrCode: "www.chbtc.com",
+                shareText: "扫描图片右侧二维码\n随时随地掌握大行情")
+            
+            //展示效果图
+            let sharevc = ShareViewController()
+            sharevc.shareImage = newImage
+            self.present(sharevc, animated: true)
+        }
         
         if let image = UIApplication.shared.ch_takeScreenshot() {
             //分享按钮
