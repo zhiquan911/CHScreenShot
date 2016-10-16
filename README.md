@@ -2,6 +2,10 @@
 
 >Swift3编写的截屏分享组件
 
+![test1.png](https://github.com/zhiquan911/CHScreenShot/blob/master/test1.png)
+![test2.png](https://github.com/zhiquan911/CHScreenShot/blob/master/test2.png)
+![test3.png](https://github.com/zhiquan911/CHScreenShot/blob/master/test3.png)
+
 ##Features
 
 - 完美支持Swift3.0编译
