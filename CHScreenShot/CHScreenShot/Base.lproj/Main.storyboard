@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KJG-so-FX1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CHScreenShot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenshot" translatesAutoresizingMaskIntoConstraints="NO" id="pxg-cy-Fqy">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pxg-cy-Fqy" secondAttribute="height" multiplier="125:201" id="HSd-K0-LdK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pxg-cy-Fqy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7eo-bh-hfN"/>
+                            <constraint firstAttribute="trailing" secondItem="pxg-cy-Fqy" secondAttribute="trailing" id="BiG-Qj-7sg"/>
+                            <constraint firstItem="pxg-cy-Fqy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Xf2-xZ-Nq7"/>
+                            <constraint firstItem="pxg-cy-Fqy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mWs-cJ-4q4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vHY-Wc-7iS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="199"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w6T-ke-yYa">
+            <objects>
+                <navigationController id="KJG-so-FX1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dMn-nO-aZh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jNb-Ur-FDS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b47-Vx-6Hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="200"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="screenshot" width="375" height="603"/>
+    </resources>
+</document>
