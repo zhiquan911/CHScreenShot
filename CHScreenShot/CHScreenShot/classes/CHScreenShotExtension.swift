@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension String {
+public extension String {
     
     /**
      计算文字的宽度
@@ -18,7 +18,7 @@ extension String {
      
      - returns:
      */
-    func ch_sizeWithConstrained(_ font: UIFont) -> CGSize {
+    public func ch_sizeWithConstrained(_ font: UIFont) -> CGSize {
         let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
         return boundingBox.size
@@ -26,7 +26,7 @@ extension String {
     
 }
 
-extension UIImage {
+public extension UIImage {
     
     
     /// 添加分享信息
@@ -38,7 +38,7 @@ extension UIImage {
     /// - parameter infoBackgroundColor: 信息背景颜色
     ///
     /// - returns: 合成后的图片
-    func ch_addShareInfo(
+    public func ch_addShareInfo(
         appLogo: UIImage,
         qrCode: String,
         userAvatar: UIImage? = nil,
@@ -59,12 +59,12 @@ extension UIImage {
     }
 }
 
-extension UIView {
+public extension UIView {
     
     /// 截屏
     ///
     /// - returns:
-    func ch_screenShot() -> UIImage? {
+    public func ch_screenShot() -> UIImage? {
         //截屏
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
         self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
@@ -75,10 +75,10 @@ extension UIView {
     
 }
 
-extension UIViewController {
+public extension UIViewController {
     
     // 截屏+弹出视图
-    func ch_showScreenShotView(
+    public func ch_showScreenShotView(
         screenshotImage: UIImage,
         items: [CHControlItem] = [CHControlItem](),
         itemLayout: UILayoutConstraintAxis = UILayoutConstraintAxis.horizontal) {
@@ -96,13 +96,13 @@ extension UIViewController {
     }
 }
 
-extension UIApplication {
+public extension UIApplication {
     
     
     /// 截屏
     ///
     /// - returns:
-    func ch_takeScreenshot() -> UIImage? {
+    public func ch_takeScreenshot() -> UIImage? {
         let vc = self.keyWindow?.rootViewController
         //截屏
         let img = vc?.view.ch_screenShot()
