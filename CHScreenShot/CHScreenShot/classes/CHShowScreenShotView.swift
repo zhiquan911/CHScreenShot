@@ -56,6 +56,7 @@ open class CHShowScreenShotView: UIViewController {
     open var screenshotImage: UIImage!
     
     var containerView: UIView!
+    var backgroundControl: UIControl!
 //    var stackViewItems: UIStackView!
     
     override open func viewDidLoad() {
@@ -75,13 +76,20 @@ open class CHShowScreenShotView: UIViewController {
     /// - returns:
     func initView() {
         
-        self.view.backgroundColor = UIColor(white: 0, alpha: 0.8)
+        self.view.backgroundColor = UIColor.clear
         
         var totalHeight: CGFloat = itemHeight
         if self.itemLayout == .vertical {
             totalHeight = CGFloat(self.items.count) * itemHeight
         }
         
+        //创建背景的ControlView
+        self.backgroundControl = UIControl()
+        self.backgroundControl.backgroundColor = UIColor(white: 0, alpha: 0.8)
+        self.backgroundControl.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundControl.addTarget(self, action: #selector(self.dismissView),
+                      for: UIControlEvents.touchUpInside)
+        self.view.addSubview(self.backgroundControl)
         
         //创建容器的View
         self.containerView = UIView()
@@ -144,14 +152,28 @@ open class CHShowScreenShotView: UIViewController {
             "containerView": self.containerView,
             "screenImageView": screenImageView,
             "blurView": blurView,
-            "stackView": stackView
+            "stackView": stackView,
+            "backgroundControl": self.backgroundControl
         ]
         
         let containerSize = CGSize(width: self.view.bounds.width * paddingExt,
                                    height: self.view.bounds.height * paddingExt)
         
-//        self.containerView.frame = CGRect(x: 0, y: 0,
-//                                          width: containerSize.width, height: containerSize.height)
+        
+        self.view.addConstraints(
+            NSLayoutConstraint.constraints(
+                withVisualFormat: "H:|-0-[backgroundControl]-0-|",
+                options: NSLayoutFormatOptions(),
+                metrics: nil,
+                views:views))
+        
+        self.view.addConstraints(
+            NSLayoutConstraint.constraints(
+                withVisualFormat: "V:|-0-[backgroundControl]-0-|",
+                options: NSLayoutFormatOptions(),
+                metrics: nil,
+                views:views))
+        
         //居中
         self.view.addConstraint(NSLayoutConstraint(
             item: self.containerView,
@@ -233,7 +255,7 @@ open class CHShowScreenShotView: UIViewController {
     
     
     /// 消失
-    func dismiss() {
+    func dismissView() {
         self.dismiss(animated: true)
     }
     

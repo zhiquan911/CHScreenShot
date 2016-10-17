@@ -26,6 +26,7 @@ class CMShareImageView: UIView {
     var infoBackgroundColor = UIColor.white
     var labelFont = UIFont.systemFont(ofSize: 15)
     var labelColor = UIColor.darkGray
+
    
     
     var image: UIImage {                        //生成截图

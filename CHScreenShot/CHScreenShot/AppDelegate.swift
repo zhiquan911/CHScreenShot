@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     cornerRadius: 5,
                     action: {
                         (screenShotView) in
-                        screenShotView.dismiss()
+                        screenShotView.dismissView()
                 })
                 
                 vc?.ch_showScreenShotView(screenshotImage: image,

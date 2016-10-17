@@ -95,7 +95,7 @@ class ViewController: UIViewController {
                 cornerRadius: 5,
                 action: {
                     (screenShotView) in
-                    screenShotView.dismiss()
+                    screenShotView.dismissView()
             })
             
             self.ch_showScreenShotView(screenshotImage: image,

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C54E91641DB4790D006D16BD /* CHScreenShot.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C54E91611DB4790D006D16BD /* CHScreenShot.podspec */; };
+		C54E91651DB4790D006D16BD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C54E91621DB4790D006D16BD /* LICENSE */; };
+		C54E91661DB4790D006D16BD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C54E91631DB4790D006D16BD /* README.md */; };
 		C590658D1DB315B3008A2BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590658C1DB315B3008A2BED /* AppDelegate.swift */; };
 		C590658F1DB315B3008A2BED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590658E1DB315B3008A2BED /* ViewController.swift */; };
 		C59065921DB315B3008A2BED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59065901DB315B3008A2BED /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C54E91611DB4790D006D16BD /* CHScreenShot.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CHScreenShot.podspec; path = ../CHScreenShot.podspec; sourceTree = "<group>"; };
+		C54E91621DB4790D006D16BD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C54E91631DB4790D006D16BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C59065891DB315B3008A2BED /* CHScreenShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHScreenShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C590658C1DB315B3008A2BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C590658E1DB315B3008A2BED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -50,6 +56,9 @@
 		C59065801DB315B3008A2BED = {
 			isa = PBXGroup;
 			children = (
+				C54E91611DB4790D006D16BD /* CHScreenShot.podspec */,
+				C54E91621DB4790D006D16BD /* LICENSE */,
+				C54E91631DB4790D006D16BD /* README.md */,
 				C590658B1DB315B3008A2BED /* CHScreenShot */,
 				C590658A1DB315B3008A2BED /* Products */,
 			);
@@ -150,7 +159,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54E91651DB4790D006D16BD /* LICENSE in Resources */,
 				C59065971DB315B3008A2BED /* LaunchScreen.storyboard in Resources */,
+				C54E91641DB4790D006D16BD /* CHScreenShot.podspec in Resources */,
 				C59065B01DB31683008A2BED /* Localizable.strings in Resources */,
 				C59065941DB315B3008A2BED /* Assets.xcassets in Resources */,
 				C59065921DB315B3008A2BED /* Main.storyboard in Resources */,
@@ -170,6 +181,7 @@
 				C59065A91DB31683008A2BED /* CHScreenShotManager.swift in Sources */,
 				C59065B71DB374D2008A2BED /* CHScreenShotExtension.swift in Sources */,
 				C59065AA1DB31683008A2BED /* CHShareImageView.swift in Sources */,
+				C54E91661DB4790D006D16BD /* README.md in Sources */,
 				C590658D1DB315B3008A2BED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

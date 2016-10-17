@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "CHScreenShot"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Swift3编写的截屏分享组件"
   s.description  = <<-DESC
                    Swift3编写的截屏分享组件，支持设备快捷键截屏和手动截屏
