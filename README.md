@@ -6,7 +6,7 @@
 ![test2.jpg](https://github.com/zhiquan911/CHScreenShot/blob/master/test2.jpg)
 ![test3.jpg](https://github.com/zhiquan911/CHScreenShot/blob/master/test3.jpg)
 
-##Features
+## Features
 
 - 完美支持Swift3.0编译
 - 支持设备快捷键截屏和手动截屏
@@ -14,16 +14,16 @@
 - 集成使用简单，二次开发扩展强大
 
 
-##Requirements
+## Requirements
 
 - iOS 9+
 - Xcode 8+
 - Swift 3.0+
 - iPhone/iPad
 
-##Installation
+## Installation
 
-###CocoaPods
+### CocoaPods
 
 [CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects.
 
@@ -41,7 +41,7 @@ use_frameworks!
 pod 'CHScreenShot'
 ```
 
-##Example
+## Example
 
 在AppDelegate类中监听设备的快捷键截图
 
@@ -165,7 +165,7 @@ pod 'CHScreenShot'
 
 更详细集成方法，根据实际的例子请查看源代码中的demo
 
-###Donations
+## Donations
 
 为了让开发者更积极分享技术，开源程序代码，我们发起数字货币捐助计划，捐款只接收以下货币。
 
@@ -174,6 +174,6 @@ pod 'CHScreenShot'
 - **ETH/ETC Address**:  0xc312ed502fb57e0c42f9C7663CB7A3B0A6c4f6D2
 
 
-###License
+## License
 
 Released under [MIT License.](https://github.com/zhiquan911/CHScreenShot/blob/master/LICENSE) 
