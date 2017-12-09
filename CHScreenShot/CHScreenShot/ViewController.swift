@@ -64,12 +64,12 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    func leftButton(sender: UIButton) {
+    @objc func leftButton(sender: UIButton) {
         
         self.shareStyle1()
     }
     
-    func rightButton(sender: UIButton) {
+    @objc func rightButton(sender: UIButton) {
         
         self.shareStyle2()
     }

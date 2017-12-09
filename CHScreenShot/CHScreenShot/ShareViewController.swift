@@ -46,7 +46,7 @@ class ShareViewController: UIViewController {
     }
     
     
-    func hiddenView(gr:UIGestureRecognizer) {
+    @objc func hiddenView(gr:UIGestureRecognizer) {
         self.dismiss(animated: true) { 
             
         }

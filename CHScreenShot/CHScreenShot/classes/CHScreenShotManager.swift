@@ -46,7 +46,7 @@ open class CHScreenShotManager: NSObject {
     
     
     //截屏响应
-    func userDidTakeScreenshot(notification: Notification) {
+    @objc func userDidTakeScreenshot(notification: Notification) {
         let app = notification.object as? UIApplication
         let vc = app?.keyWindow?.rootViewController
         
@@ -94,6 +94,6 @@ func createQRForString(qrString: String) -> UIImage {
     colorFilter?.setValue(CIColor(red: 0, green: 0, blue: 0), forKey: "inputColor0")
     colorFilter?.setValue(CIColor(red: 1, green: 1, blue: 1), forKey: "inputColor1")
     // 返回二维码image
-    let codeImage = UIImage(ciImage: (colorFilter?.outputImage?.applying(CGAffineTransform(scaleX: 5, y: 5)))!)
+    let codeImage = UIImage(ciImage: (colorFilter?.outputImage?.transformed(by: CGAffineTransform(scaleX: 5, y: 5)))!)
     return codeImage
 }

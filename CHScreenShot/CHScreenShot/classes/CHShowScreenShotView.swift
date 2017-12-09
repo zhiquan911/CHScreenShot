@@ -255,13 +255,13 @@ open class CHShowScreenShotView: UIViewController {
     
     
     /// 消失
-    func dismissView() {
+    @objc func dismissView() {
         self.dismiss(animated: true)
     }
     
     
     /// 确认按钮
-    func handleButtonPress(sender: UIButton) {
+    @objc func handleButtonPress(sender: UIButton) {
         self.dismiss(animated: false) {
             let item = self.items[sender.tag]
             item.action?(self)

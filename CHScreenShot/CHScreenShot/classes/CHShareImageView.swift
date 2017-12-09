@@ -97,9 +97,9 @@ class CMShareImageView: UIView {
         //绘制分享文字内容
         if !shareText.isEmpty {
             
-            let fontAttributes: [String: Any] = [
-                NSFontAttributeName: labelFont,
-                NSForegroundColorAttributeName: labelColor
+            let fontAttributes: [NSAttributedStringKey: Any] = [
+                NSAttributedStringKey.font: labelFont,
+                NSAttributedStringKey.foregroundColor: labelColor
             ]
             
             let textSize = shareText.ch_sizeWithConstrained(labelFont)
